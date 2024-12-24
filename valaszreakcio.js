@@ -70,7 +70,7 @@ function handleAnswerClick(isClickable) {
 
                 setTimeout(() => {
                     answer.style.animation = '';
-                    showPrizeMessage('5 000 Ft');
+                    showPrizeMessage('Szarosz vagy!');
                 }, 5000);
             } else {
                 answer.style.backgroundColor = 'orange';
@@ -81,7 +81,7 @@ function handleAnswerClick(isClickable) {
                 }, 5000);
 
                 setTimeout(() => {
-                    showPrizeMessage('0 Ft');
+                    showPrizeMessage('Nem nyert, szarosz vagy!');
                 }, 8000);
             }
         });
