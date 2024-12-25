@@ -1,3 +1,11 @@
+var jelolValasz = document.getElementById('valasz-jelol');
+var nyertValasz = document.getElementById('nyert-jelol');
+var vesztValasz = document.getElementById('veszt-jelol');
+jelolValasz.volume = 0.2
+nyertValasz.volume = 0.2
+vesztValasz.volume = 0.2
+
+
 // Véletlenszerű sorrend generálása (csak a válaszok szövegét keverjük meg)
 function shuffleAnswersContent() {
     const answersContainer = document.querySelector('.answers');
@@ -61,29 +69,32 @@ function handleAnswerClick(isClickable) {
             });
 
             answer.querySelector('.option').style.color = 'black';
+            answer.style.backgroundColor = 'orange';
+            jelolValasz.play();
 
-            if (isCorrect) {
-                answer.style.backgroundColor = 'orange';
-                setTimeout(() => {
-                    answer.style.animation = 'blink-correct 0.7s linear infinite';
-                }, 3000);
+            jelolValasz.onended = () => {
+                if (isCorrect) {
+                    setTimeout(() => {
+                        nyertValasz.play(); 
+                        answer.style.animation = 'blink-correct 0.7s linear infinite';
+                    }, 1.5);
 
-                setTimeout(() => {
-                    answer.style.animation = '';
-                    showPrizeMessage('Szarosz vagy!');
-                }, 5000);
-            } else {
-                answer.style.backgroundColor = 'orange';
+                    setTimeout(() => {
+                        answer.style.animation = '';
+                        showPrizeMessage('Szarosz vagy!');
+                    }, 2500);
+                } else {
+                    const correctAnswer = document.querySelector('.answer-box[data-correct="true"]');
+                    setTimeout(() => {
+                        vesztValasz.play();
+                        correctAnswer.style.animation = 'blink 0.7s linear infinite';
+                    }, 1.5);
 
-                const correctAnswer = document.querySelector('.answer-box[data-correct="true"]');
-                setTimeout(() => {
-                    correctAnswer.style.animation = 'blink 0.7s linear infinite';
-                }, 5000);
-
-                setTimeout(() => {
-                    showPrizeMessage('Nem nyert, szarosz vagy!');
-                }, 8000);
-            }
+                    setTimeout(() => {
+                        showPrizeMessage('Nem nyert, szarosz vagy!');
+                    }, 3500);
+                }
+            };
         });
     });
 }
