@@ -81,7 +81,7 @@ function handleAnswerClick(isClickable) {
 
                     setTimeout(() => {
                         answer.style.animation = '';
-                        showPrizeMessage('Szarosz vagy!');
+                        showPrizeMessage('Tiszta nutis a popszid!');
                     }, 2500);
                 } else {
                     const correctAnswer = document.querySelector('.answer-box[data-correct="true"]');
@@ -91,7 +91,7 @@ function handleAnswerClick(isClickable) {
                     }, 1.5);
 
                     setTimeout(() => {
-                        showPrizeMessage('Nem nyert, szarosz vagy!');
+                        showPrizeMessage('Pfffű édeszem!');
                     }, 3500);
                 }
             };
