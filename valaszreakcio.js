@@ -81,7 +81,7 @@ function handleAnswerClick(isClickable) {
 
                     setTimeout(() => {
                         answer.style.animation = '';
-                        showPrizeMessage('Tiszta nutis a popszid!');
+                        showPrizeMessage('Aonváglak!');
                     }, 2500);
                 } else {
                     const correctAnswer = document.querySelector('.answer-box[data-correct="true"]');
@@ -91,7 +91,7 @@ function handleAnswerClick(isClickable) {
                     }, 1.5);
 
                     setTimeout(() => {
-                        showPrizeMessage('Pfffű édeszem!');
+                        showPrizeMessage('Szerencséd, aonvágtalak volna!');
                     }, 3500);
                 }
             };
