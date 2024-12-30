@@ -14,9 +14,9 @@ body {
 
 .logo {
     position: absolute;
-    top: 10px; /* Bal felső saroktól 10px */
-    left: 10px; /* Bal felső saroktól 10px */
-    width: 20vw;
+    top: 20px; /* Bal felső saroktól távolabb */
+    left: 20px; /* Bal felső saroktól távolabb */
+    width: 15vw;
     height: auto; /* Az arányok megőrzése */
     z-index: 10; /* Mindig a kérdések felett jelenjen meg */
 }
@@ -174,13 +174,15 @@ body {
 /* Telefon fektetett módhoz speciális szabályok */
 @media (max-width: 1024px) and (orientation: landscape) {
     body {
-        background-size: contain; /* A teljes képernyőt lefedje arányosan */
+        background-size: cover; /* A teljes képernyőt kitöltse arányosan */
         background-position: center center; /* Középre igazítás fektetett módban */
         overflow: hidden; /* Elkerülni a túlnyúlásokat */
     }
 
     .logo {
-        width: 30vw; /* Nagyobb méret, hogy fektetett módon is látható legyen */
+        top: 10px; /* Fektetett módban megfelelő pozíció */
+        left: 10px; /* Fektetett módban megfelelő pozíció */
+        width: 20vw; /* Kisebb méret, hogy jól illeszkedjen */
     }
 
     .quiz-container {
