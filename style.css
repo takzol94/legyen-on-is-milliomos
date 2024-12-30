@@ -74,19 +74,19 @@ body {
     padding: 10px; /* Belülről távolság */
     text-align: center;
     box-shadow: 0 0 15px #0066cc; /* Erősebb árnyék */
-    max-width: 80%; /* Kisebb szélesség */
+    max-width: 60%; /* Kisebb szélesség */
     margin: 0 auto; /* Középre helyezés horizontálisan */
     display: flex;
     flex-direction: column; /* Függőleges rendezés */
     justify-content: center; /* Vertikális középre igazítás */
     align-items: center; /* Horizontális középre igazítás */
-    line-height: 1.5; /* Jobb sortávolság */
+    line-height: 1.0; /* Jobb sortávolság */
     word-wrap: break-word; /* Szövegtörés engedélyezése */
 }
 
 .prize-label {
     color: orange;
-    font-size: 36px; /* Nagyobb betűméret */
+    font-size: 50px; /* Nagyobb betűméret */
     font-weight: bold; /* Félkövér szöveg */
     margin-bottom: 10px; /* Távolság az összeg és a cím között */
     text-align: center; /* Szöveg középre igazítása */
@@ -94,7 +94,7 @@ body {
 
 .prize-amount {
     color: white;
-    font-size: 56px; /* Nagyobb betűméret az összeghez */
+    font-size: 50px; /* Nagyobb betűméret az összeghez */
     font-weight: bold; /* Félkövér szöveg */
     text-align: center; /* Szöveg középre igazítása */
 }
@@ -157,13 +157,13 @@ body {
     }
 
     .prize-message {
-        font-size: 18px; /* Szöveg mobilon kisebb */
-        max-width: 90%; /* Mobilon szélesebb */
+        font-size: 40px; /* Szöveg mobilon kisebb */
+        max-width: 60%; /* Mobilon szélesebb */
         padding: 10px;
     }
 
     .prize-label {
-        font-size: 28px; /* Mobilon kisebb méret a címhez */
+        font-size: 40px; /* Mobilon kisebb méret a címhez */
     }
 
     .prize-amount {
