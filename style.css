@@ -68,33 +68,33 @@ body {
 .prize-message {
     background-color: #003366; /* Sötétkék válasz háttér */
     border: 5px solid #0066cc; /* Vastagabb világoskék keret */
-    border-radius: 40px; /* Nagyobb lekerekítés */
+    border-radius: 20px; /* Kisebb lekerekítés */
     color: white;
-    font-size: 18px; /* Alapértelmezett betűméret */
+    font-size: 22px; /* Nagyobb betűméret a szöveghez */
     padding: 10px; /* Belülről távolság */
     text-align: center;
     box-shadow: 0 0 15px #0066cc; /* Erősebb árnyék */
-    max-width: 90%; /* Maximális szélesség */
+    max-width: 80%; /* Kisebb szélesség */
     margin: 0 auto; /* Középre helyezés horizontálisan */
     display: flex;
     flex-direction: column; /* Függőleges rendezés */
     justify-content: center; /* Vertikális középre igazítás */
     align-items: center; /* Horizontális középre igazítás */
-    line-height: 1.2; /* Jobb sortávolság */
+    line-height: 1.5; /* Jobb sortávolság */
     word-wrap: break-word; /* Szövegtörés engedélyezése */
 }
 
 .prize-label {
     color: orange;
-    font-size: 30px; /* Nagyobb betűméret */
+    font-size: 36px; /* Nagyobb betűméret */
     font-weight: bold; /* Félkövér szöveg */
-    margin-bottom: 15px; /* Távolság az összeg és a cím között */
+    margin-bottom: 10px; /* Távolság az összeg és a cím között */
     text-align: center; /* Szöveg középre igazítása */
 }
 
 .prize-amount {
     color: white;
-    font-size: 48px; /* Nagyobb betűméret az összeghez */
+    font-size: 56px; /* Nagyobb betűméret az összeghez */
     font-weight: bold; /* Félkövér szöveg */
     text-align: center; /* Szöveg középre igazítása */
 }
@@ -157,15 +157,17 @@ body {
     }
 
     .prize-message {
-        font-size: 16px;
+        font-size: 18px; /* Szöveg mobilon kisebb */
+        max-width: 90%; /* Mobilon szélesebb */
+        padding: 10px;
     }
 
     .prize-label {
-        font-size: 24px;
+        font-size: 28px; /* Mobilon kisebb méret a címhez */
     }
 
     .prize-amount {
-        font-size: 28px;
+        font-size: 40px; /* Mobilon kisebb méret az összeghez */
     }
 }
 
