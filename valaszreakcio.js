@@ -81,7 +81,7 @@ function handleAnswerClick(isClickable) {
 
                     setTimeout(() => {
                         answer.style.animation = '';
-                        showPrizeMessage('Hát az most nincs!');
+                        showPrizeMessage('Aonvágni!');
                     }, 2500);
                 } else {
                     const correctAnswer = document.querySelector('.answer-box[data-correct="true"]');
@@ -91,7 +91,7 @@ function handleAnswerClick(isClickable) {
                     }, 1.5);
 
                     setTimeout(() => {
-                        showPrizeMessage('Bedugok valamit a popszidba!');
+                        showPrizeMessage('Azt hitted, mih?!');
                     }, 3500);
                 }
             };
